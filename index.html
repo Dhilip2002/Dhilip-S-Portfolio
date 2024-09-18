@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dhilip S - Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+
+    <style>
+      @media screen and (max-width: 400px) and (max-height: 650px) {
+        #contact {
+          order: -1; 
+        }
+        main {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+  
+      @media screen and (max-width: 1400px) {
+        #profile {
+          height: 83vh;
+          margin-bottom: 6rem;
+        }
+        .about-containers {
+          flex-wrap: wrap;
+        }
+        #contact,
+        #projects {
+          height: fit-content;
+        }
+      }
+  
+      @media screen and (max-width: 1200px) {
+        #contact {
+      padding-top: 6rem; /* Example padding top adjustment */
+      margin-top: 6rem; /* Example margin top adjustment */
+      }
+  
+      /* Adjusting the contact title */
+      #contact h1.title {
+     margin-top: 6rem; /* Example margin top adjustment */
+  }
+
+        #desktop-nav {
+          display: none;
+        }
+        #hamburger-nav {
+          display: flex;
+        }
+        #experience,
+        .experience-details-container {
+          margin-top: 2rem;
+        }
+        #profile,
+        .section-container {
+          display: block;
+        }
+        .arrow {
+          display: none;
+        }
+        section,
+        .section-container {
+          height: fit-content;
+        }
+        section {
+          margin: 0 5%;
+        }
+        .section__pic-container {
+          width: 275px;
+          height: 275px;
+          margin: 0 auto 2rem;
+        }
+        .about-containers {
+          margin-top: 0;
+        }
+      }
+  
+      @media screen and (max-width: 600px) {
+        #contact,
+        footer {
+          height: 40vh;
+        }
+        #profile {
+          height: 83vh;
+          margin-bottom: 0;
+        }
+        article {
+          font-size: 1rem;
+        }
+        footer nav {
+          height: fit-content;
+          margin-bottom: 2rem;
+        }
+        .about-containers,
+        .contact-info-upper-container,
+        .btn-container {
+          flex-wrap: wrap;
+        }
+        .contact-info-container {
+          margin: 0;
+        }
+        .contact-info-container p,
+        .nav-links li a {
+          font-size: 1rem;
+        }
+        .experience-sub-title {
+          font-size: 1.25rem;
+        }
+        .logo {
+          font-size: 1.5rem;
+        }
+        .nav-links {
+          flex-direction: column;
+          gap: 0.5rem;
+          text-align: center;
+        }
+        .section__pic-container {
+          width: auto;
+          height: 46vw;
+          justify-content: center;
+        }
+        .section__text__p2 {
+          font-size: 1.25rem;
+        }
+        .title {
+          font-size: 2rem;
+        }
+        .text-container {
+          text-align: justify;
+        }
+      }
+  
+      #projects .section__text__p1 {
+        margin-top: 5rem;
+      }
+  
+      #about .about-containers {
+        margin-bottom: 7.5rem; 
+      }
+  
+      #about .about-containers {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 3rem;
+      }
+  
+      #about .details-container {
+        flex: 1;
+        margin: 0 1rem 2rem 1rem; 
+      }
+  
+      #about .text-container {
+        margin-top: 0.01rem; 
+        text-align: justify;
+        padding: 0 1rem; 
+      }
+  
+      #about .section-container {
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Dhilip S</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Dhilip S</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.png" alt="Dhilip S profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Dhilip S</h1>
+        <p class="section__text__p2">RPA Developer | Python Developer | Artificial Intelligence | Machine Learning</p>
+        <div class="btn-container">
+          <button class="btn btn-color-2" onclick="window.open('./assets/resume.pdf')">Download CV</button>
+          <button class="btn btn-color-1" onclick="location.href='#contact'">Contact Info</button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/dhilip-s-62ab26200/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/Dhilip2002'"
+          />
+          <img
+          src="./assets/medium.png"
+          alt="My Medium profile"
+          class="icon"
+          onclick="location.href='https://medium.com/@dhilip2002'"
+        />
+        <img
+        src="./assets/youtube.png"
+        alt="My YouTube profile"
+        class="icon"
+        onclick="location.href='https://www.youtube.com/@dhilips3913'"
+      />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>9 months<br />Developer Intern<br/>Bejawar Innovative Technologies</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>B.E. Electronics and Communication Engineering<br/>KGiSL Institute of  Technology</p>
+            </div>
+          </div>
+          <style>
+            p {
+              margin-bottom: 1rem; /* Adjust the value as needed */
+            }
+          </style>
+          <div class="text-container">
+            <p>
+              I am an Electronics and Communication Engineering student at KGiSL Institute of Technology, expected to graduate in 2024. I have a strong academic background and a keen interest in learning new skills and technologies.
+
+              Previously, I interned at Bejawar Innovative Technologies, gaining valuable experience in Python, AI, and ML. I developed various processes and tasks, enhancing my technical skills.
+              
+              I have demonstrated my abilities by winning awards and certifications in IoT and RPA, such as the UiPath Citizen Developer Skill-A-Thon, where I created three bots integrating ChatGPT with RPA and Excel, and the Mixed Signal SoC Design Marathon, where I created a PWM Increment Circuit using eSim and SKY130.
+              
+              I have acquired skills in cloud deployment, machine learning, and large language models, which I am eager to apply and enhance in future projects and my career. I aspire to pursue a career in AI, ML, and RPA, solving real-world problems and creating positive impact. I am motivated by the opportunities and challenges in these domains and am always ready to learn and grow as a professional.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="scrollToSection('experience')"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Developer Intern</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Python</h3>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Artificial Intelligence</h3>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Machine Learning</h3>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Large Language Models (LLM) - GPT, Mistral</h3>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Linux</h3>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Cloud Deployment - Google Cloud Platform (GCP)</h3>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Javascript</h3>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Flask</h3>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Generative AI</h3>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Vector Databases - Chroma DB</h3>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Supabase</h3>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Retrieval Augmented Generation (RAG)</h3>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="scrollToSection('projects')"
+      />
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-1.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">
+              Augmented Question Answering System for Biomedical Literature Retrieval using Language Models and PubMed Integration</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Dhilip2002/Augmented-Question-Answering-System-for-Biomedical-Literature-Retrieval-using-LLM-and-PubMed'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://www.youtube.com/watch?v=BUgbTjWyZk0&t=607s'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Open AI Chatbot</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Dhilip2002/Uipath-Citizen-Developer-SKILL-A-THON-2022/tree/main/ChatGPT%20with%20RPA'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://www.youtube.com/watch?v=IgyfVYy784I'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-3.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title"> Spelling Correction Bot</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Dhilip2002/HACK-A-BOT-Hackathon'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://www.youtube.com/watch?v=t3VpVkXHreA'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="scrollToSection('contact')"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:dhilipsubramanian2002@gmail.com">Mail</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/dhilip-s-62ab26200/">LinkedIn</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/medium.png"
+            alt="medium icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://medium.com/@dhilip2002">Medium</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/youtube.png"
+            alt="youtube icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.youtube.com/@dhilips3913">YouTube</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2024 Dhilip S. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
