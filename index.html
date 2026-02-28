@@ -101,6 +101,31 @@
       
       .about-text {
         text-align: justify;
+        margin-bottom: 1.5rem;
+      }
+      
+      .about-heading {
+        font-weight: 600;
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+        color: #212529;
+      }
+      
+      .achievement-list {
+        list-style: none;
+        padding-left: 0;
+      }
+      
+      .achievement-list li {
+        margin-bottom: 0.5rem;
+        padding-left: 1.5rem;
+        position: relative;
+      }
+      
+      .achievement-list li:before {
+        content: "📌";
+        position: absolute;
+        left: 0;
       }
       
       .experience-item {
@@ -259,6 +284,13 @@
         max-width: 800px;
         margin: 0 auto;
       }
+      
+      .headline {
+        font-weight: 600;
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+      }
     </style>
   </head>
   <body>
@@ -343,28 +375,54 @@
         
         <div class="section-content">
           <div class="card p-4">
-            <p class="about-text">
-              I am an AI/ML professional with 1 year of industry experience, specializing in building intelligent solutions for complex data challenges. An Electronics and Communication Engineering graduate from KGiSL Institute of Technology, I combine strong technical foundations with advanced AI expertise.
+            <p class="headline text-center">
+              𝐀𝐈 & 𝐌𝐋 𝐄𝐧𝐠𝐢𝐧𝐞𝐞𝐫 | 𝐀𝐠𝐞𝐧𝐭𝐢𝐜 𝐀𝐈 | 𝐃𝐨𝐜𝐮𝐦𝐞𝐧𝐭 𝐈𝐧𝐭𝐞𝐥𝐥𝐢𝐠𝐞𝐧𝐜𝐞 | 𝐑𝐀𝐆 | 𝐋𝐋𝐌 𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐨𝐧
             </p>
             
             <p class="about-text">
-              In my current role, I have designed and deployed solutions in:
+              AI & ML Engineer with 1+ year of hands-on industry experience designing and deploying AI-driven, agentic automation solutions across document-intensive and enterprise workflows. I specialize in building scalable, production-ready AI systems using LLMs, RAG architectures, OCR, and Multi-Agent Frameworks to deliver measurable business impact.
             </p>
             
-            <ul class="about-text">
-              <li><strong>Prediction Analysis & Classification</strong> – Forecasting and pattern recognition models</li>
-              <li><strong>Computer Vision</strong> – Object detection and matching systems</li>
-              <li><strong>Natural Language Processing</strong> – Entity recognition, document processing, and information extraction</li>
-              <li><strong>Advanced RAG Systems</strong> – Agentic RAG architectures for complex query resolution</li>
-              <li><strong>Document Intelligence</strong> – OCR for structured, unstructured, and handwritten documents</li>
+            <h5 class="about-heading">𝐀𝐈-𝐃𝐫𝐢𝐯𝐞𝐧 𝐃𝐨𝐜𝐮𝐦𝐞𝐧𝐭 𝐈𝐧𝐭𝐞𝐥𝐥𝐢𝐠𝐞𝐧𝐜𝐞:</h5>
+            <p class="about-text">
+              Designed and deployed Python-based AI/ML solutions leveraging LLMs, OCR, NLP, and RAG pipelines to automate document understanding, data extraction, classification, and decision workflows.
+            </p>
+            
+            <h5 class="about-heading">𝐀𝐠𝐞𝐧𝐭𝐢𝐜 & 𝐌𝐮𝐥𝐭𝐢-𝐀𝐠𝐞𝐧𝐭 𝐒𝐲𝐬𝐭𝐞𝐦𝐬:</h5>
+            <p class="about-text">
+              Built LangGraph-powered multi-agent workflows for PO–Invoice comparison, mismatch detection, and dispute identification, enabling high-accuracy automated processing.
+            </p>
+            
+            <h5 class="about-heading">𝐄𝐧𝐝-𝐭𝐨-𝐄𝐧𝐝 𝐈𝐧𝐭𝐞𝐥𝐥𝐢𝐠𝐞𝐧𝐭 𝐏𝐢𝐩𝐞𝐥𝐢𝐧𝐞𝐬:</h5>
+            <p class="about-text">
+              Implemented integrated pipelines combining embeddings, vector databases, OCR preprocessing, and LLM reasoning, improving document intelligence and operational efficiency.
+            </p>
+            
+            <h5 class="about-heading">𝐌𝐨𝐝𝐞𝐥 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐦𝐞𝐧𝐭 & 𝐅𝐢𝐧𝐞-𝐓𝐮𝐧𝐢𝐧𝐠:</h5>
+            <p class="about-text">
+              Developed and fine-tuned forecasting, classification, NLP, and computer vision models, achieving up to 15% accuracy improvement and 40% reduction in manual review effort.
+            </p>
+            
+            <h5 class="about-heading">𝐑𝐀𝐆 & 𝐀𝐠𝐞𝐧𝐭𝐢𝐜 𝐑𝐀𝐆 𝐀𝐫𝐜𝐡𝐢𝐭𝐞𝐜𝐭𝐮𝐫𝐞𝐬:</h5>
+            <p class="about-text">
+              Engineered context-aware retrieval systems for intelligent query answering, improving response relevance and reliability.
+            </p>
+            
+            <h5 class="about-heading">𝐄𝐧𝐭𝐞𝐫𝐩𝐫𝐢𝐬𝐞 𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐨𝐧 & 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦𝐬:</h5>
+            <p class="about-text">
+              Delivered secure, role-based automation solutions using Power Pages, Power Automate, SharePoint, Azure Entra ID, and UiPath, including end-to-end permit management systems.
+            </p>
+            
+            <h5 class="about-heading">𝐑𝐞𝐜𝐞𝐧𝐭 𝐀𝐜𝐡𝐢𝐞𝐯𝐞𝐦𝐞𝐧𝐭𝐬:</h5>
+            <ul class="achievement-list">
+              <li>Built Agentic AI and RAG solutions within a 𝐂𝐞𝐧𝐭𝐞𝐫 𝐨𝐟 𝐄𝐱𝐜𝐞𝐥𝐥𝐞𝐧𝐜𝐞 (𝐂𝐨𝐄) environment</li>
+              <li>Achieved up to 90% OCR extraction accuracy across structured, unstructured, and handwritten documents</li>
+              <li>Delivered AI solutions adopted in real business workflows</li>
+              <li>Earned UiPath Certified Professional – Agentic Automation Associate (UiPath-AAAv1)</li>
             </ul>
             
-            <p class="about-text">
-              Previously, at Bejawar Innovative Technologies, I gained hands-on experience in Python, AI, and ML pipelines. My achievements include winning the UiPath Citizen Developer Skill-A-Thon for automation bots integrating ChatGPT with RPA and Excel, and recognition in Mixed Signal SoC design competitions.
-            </p>
-            
-            <p class="about-text">
-              I specialize in full-cycle AI development - from data preprocessing and model finetuning to deployment and optimization. Passionate about solving real-world problems, I'm currently focused on advancing Retrieval-Augmented Generation systems and multimodal AI applications. I thrive on transforming complex challenges into scalable, intelligent solutions that drive business value.
+            <p class="about-text mt-4">
+              I am passionate about building real-world, scalable AI systems that combine LLMs, Agentic Reasoning, Automation, and enterprise security. I enjoy working at the intersection of AI engineering, document intelligence, and intelligent automation, and I am driven to contribute to impactful, future-ready solutions.
             </p>
           </div>
         </div>
@@ -400,10 +458,10 @@
                   </p>
                 </div>
                 
-                <!-- Trainee Experience -->
+                <!-- Apprentice Experience -->
                 <div class="experience-card">
                   <p class="text-center">
-                    <strong>Trainee</strong><br>
+                    <strong>Apprentice</strong><br>
                     KGiSL<br>
                     Oct 2024 - Aug 2025 (<span id="kgisl-duration"></span>)<br>
                   </p>
@@ -809,16 +867,16 @@
       // Format the Junior Associate duration text
       let juniorAssociateDurationText = formatDuration(juniorAssociateMonthsDiff);
       
-      // Calculate duration for Trainee at KGiSL (Oct 2024 - Aug 2025)
-      const TraineeStartDate = new Date('2024-10-07');
-      const TraineeEndDate = new Date('2025-08-31');
+      // Calculate duration for Apprentice at KGiSL (Oct 2024 - Aug 2025)
+      const apprenticeStartDate = new Date('2024-10-07');
+      const apprenticeEndDate = new Date('2025-08-31');
       
-      // Calculate Trainee duration in months
-      const TraineeMonthsDiff = (TraineeEndDate.getFullYear() - TraineeStartDate.getFullYear()) * 12 + 
-                          (TraineeEndDate.getMonth() - TraineeStartDate.getMonth());
+      // Calculate Apprentice duration in months
+      const apprenticeMonthsDiff = (apprenticeEndDate.getFullYear() - apprenticeStartDate.getFullYear()) * 12 + 
+                          (apprenticeEndDate.getMonth() - apprenticeStartDate.getMonth());
       
-      // Format the Trainee duration text
-      let TraineeDurationText = formatDuration(TraineeMonthsDiff);
+      // Format the Apprentice duration text
+      let apprenticeDurationText = formatDuration(apprenticeMonthsDiff);
       
       // Calculate duration for Bejawar experience (Jun 2023 - Feb 2024)
       const bejawarStartDate = new Date('2023-06-20');
@@ -833,7 +891,7 @@
       
       // Update the duration elements
       document.getElementById('junior-associate-duration').textContent = juniorAssociateDurationText;
-      document.getElementById('kgisl-duration').textContent = TraineeDurationText;
+      document.getElementById('kgisl-duration').textContent = apprenticeDurationText;
       document.getElementById('bejawar-duration').textContent = bejawarDurationText;
     }
 
