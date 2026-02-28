@@ -400,10 +400,10 @@
                   </p>
                 </div>
                 
-                <!-- Apprentice Experience -->
+                <!-- Trainee Experience -->
                 <div class="experience-card">
                   <p class="text-center">
-                    <strong>Apprentice</strong><br>
+                    <strong>Trainee</strong><br>
                     KGiSL<br>
                     Oct 2024 - Aug 2025 (<span id="kgisl-duration"></span>)<br>
                   </p>
@@ -809,16 +809,16 @@
       // Format the Junior Associate duration text
       let juniorAssociateDurationText = formatDuration(juniorAssociateMonthsDiff);
       
-      // Calculate duration for Apprentice at KGiSL (Oct 2024 - Aug 2025)
-      const apprenticeStartDate = new Date('2024-10-07');
-      const apprenticeEndDate = new Date('2025-08-31');
+      // Calculate duration for Trainee at KGiSL (Oct 2024 - Aug 2025)
+      const TraineeStartDate = new Date('2024-10-07');
+      const TraineeEndDate = new Date('2025-08-31');
       
-      // Calculate Apprentice duration in months
-      const apprenticeMonthsDiff = (apprenticeEndDate.getFullYear() - apprenticeStartDate.getFullYear()) * 12 + 
-                          (apprenticeEndDate.getMonth() - apprenticeStartDate.getMonth());
+      // Calculate Trainee duration in months
+      const TraineeMonthsDiff = (TraineeEndDate.getFullYear() - TraineeStartDate.getFullYear()) * 12 + 
+                          (TraineeEndDate.getMonth() - TraineeStartDate.getMonth());
       
-      // Format the Apprentice duration text
-      let apprenticeDurationText = formatDuration(apprenticeMonthsDiff);
+      // Format the Trainee duration text
+      let TraineeDurationText = formatDuration(TraineeMonthsDiff);
       
       // Calculate duration for Bejawar experience (Jun 2023 - Feb 2024)
       const bejawarStartDate = new Date('2023-06-20');
@@ -833,7 +833,7 @@
       
       // Update the duration elements
       document.getElementById('junior-associate-duration').textContent = juniorAssociateDurationText;
-      document.getElementById('kgisl-duration').textContent = apprenticeDurationText;
+      document.getElementById('kgisl-duration').textContent = TraineeDurationText;
       document.getElementById('bejawar-duration').textContent = bejawarDurationText;
     }
 
