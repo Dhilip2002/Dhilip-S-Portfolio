@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <style>
-      /* Custom Styles - exactly as original */
+      /* Custom Styles - original colors and layout */
       body {
         font-family: 'Poppins', sans-serif;
         scroll-behavior: smooth;
@@ -77,12 +77,27 @@
         margin-bottom: 1.5rem;
       }
       
+      /* UNIFIED CARD STYLE (curvy, left border, shadow) */
+      .unified-card {
+        background: #ffffff;
+        border-radius: 1rem;
+        padding: 1.5rem;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        border-left: 4px solid #000000;
+        transition: all 0.3s;
+        height: 100%;
+      }
+      .unified-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      }
+      
+      /* Keep original inner card styles for nested elements if needed */
       .card {
         border-radius: 1rem;
         transition: all 0.3s;
         height: 100%;
       }
-      
       .card:hover {
         transform: translateY(-5px);
         box-shadow: 0 10px 20px rgba(0,0,0,0.1);
@@ -145,9 +160,9 @@
         border-radius: 1rem;
         background-color: #fff;
         box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        border-left: 4px solid #000000;
         transition: all 0.3s;
       }
-      
       .project-item:hover {
         transform: translateY(-5px);
         box-shadow: 0 10px 20px rgba(0,0,0,0.1);
@@ -171,11 +186,11 @@
         color: #212529;
         padding: 0.75rem;
         transition: all 0.3s;
+        border-radius: 0.5rem;
       }
       
       .contact-link:hover {
         background-color: #f8f9fa;
-        border-radius: 0.5rem;
       }
       
       .contact-icon {
@@ -235,49 +250,6 @@
         margin-bottom: 1.5rem;
       }
       
-      .skills-title {
-        position: relative;
-        top: -20px;
-        background-color: white;
-        padding: 0 15px;
-        display: inline-block;
-        margin-bottom: 0;
-      }
-      
-      .skills-card {
-        margin-top: 20px;
-        padding-top: 30px;
-      }
-      
-      .section-content {
-        padding-top: 40px;
-      }
-      
-      .section-header {
-        margin-bottom: 30px;
-      }
-
-      .achievement-card {
-        margin-bottom: 1.5rem;
-        padding: 1.5rem;
-        border-left: 4px solid #000000;
-      }
-      
-      .achievement-title {
-        font-weight: 600;
-        margin-bottom: 0.5rem;
-      }
-      
-      .achievement-date {
-        font-size: 0.9rem;
-        color: #6c757d;
-      }
-      
-      .project-container {
-        max-width: 800px;
-        margin: 0 auto;
-      }
-      
       .headline {
         font-weight: 600;
         font-size: 1.1rem;
@@ -285,7 +257,7 @@
         line-height: 1.6;
       }
 
-      /* Testimonial style (like image.png) */
+      /* Testimonial card (already matches unified style) */
       .testimonial-card-new {
         background: #ffffff;
         border-radius: 1rem;
@@ -339,7 +311,7 @@
         }
       }
 
-      /* Custom style for COE note under Junior Associate */
+      /* COE note style */
       .coe-note {
         font-size: 0.85rem;
         color: #444;
@@ -399,7 +371,7 @@
       <a href="#about" class="arrow-down"><i class="fas fa-chevron-down"></i></a>
     </section>
 
-    <!-- About Section -->
+    <!-- About Section - now using unified-card -->
     <section id="about" class="bg-light position-relative">
       <div class="container">
         <div class="section-header text-center">
@@ -407,7 +379,7 @@
           <h2 class="section-heading">About Me</h2>
         </div>
         <div class="section-content">
-          <div class="card p-4">
+          <div class="unified-card">
             <p class="headline text-center">𝐀𝐈 & 𝐌𝐋 𝐄𝐧𝐠𝐢𝐧𝐞𝐞𝐫 | 𝐀𝐠𝐞𝐧𝐭𝐢𝐜 𝐀𝐈 | 𝐃𝐨𝐜𝐮𝐦𝐞𝐧𝐭 𝐈𝐧𝐭𝐞𝐥𝐥𝐢𝐠𝐞𝐧𝐜𝐞 | 𝐑𝐀𝐆 | 𝐋𝐋𝐌 𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐨𝐧 | 𝐂𝐞𝐧𝐭𝐞𝐫 𝐨𝐟 𝐄𝐱𝐜𝐞𝐥𝐥𝐞𝐧𝐜𝐞 (𝐂𝐨𝐄)</p>
             <p class="about-text">AI & ML Engineer with 1+ year of hands-on industry experience designing and deploying AI-driven, agentic automation solutions across document-intensive and enterprise workflows. I specialize in building scalable, production-ready AI systems using LLMs, RAG architectures, OCR, and Multi-Agent Frameworks to deliver measurable business impact.</p>
             <h5 class="about-heading">𝐀𝐈-𝐃𝐫𝐢𝐯𝐞𝐧 𝐃𝐨𝐜𝐮𝐦𝐞𝐧𝐭 𝐈𝐧𝐭𝐞𝐥𝐥𝐢𝐠𝐞𝐧𝐜𝐞:</h5>
@@ -436,7 +408,7 @@
       <a href="#experience" class="arrow-down"><i class="fas fa-chevron-down"></i></a>
     </section>
 
-    <!-- Experience Section (COE now as a note under Junior Associate with custom color) -->
+    <!-- Experience Section - using unified-card for the container cards -->
     <section id="experience" class="position-relative">
       <div class="container">
         <div class="section-header text-center">
@@ -446,10 +418,8 @@
         <div class="section-content">
           <div class="row mb-5">
             <div class="col-md-6 mb-4 mb-md-0">
-              <div class="card h-100 p-4">
+              <div class="unified-card">
                 <div class="text-center mb-3"><i class="fas fa-briefcase fa-3x text-dark mb-3"></i><h3>Experience</h3></div>
-                
-                <!-- Junior Associate with COE note (now using coe-note class) -->
                 <div class="experience-card">
                   <p class="text-center">
                     <strong>Junior Associate</strong><br>
@@ -458,8 +428,6 @@
                     <span class="coe-note">Also serving as AI & Automation Developer – Center of Excellence (COE)</span>
                   </p>
                 </div>
-                
-                <!-- Trainee -->
                 <div class="experience-card">
                   <p class="text-center">
                     <strong>Trainee</strong><br>
@@ -467,8 +435,6 @@
                     Oct 2024 - Aug 2025 (<span id="kgisl-duration"></span>)<br>
                   </p>
                 </div>
-                
-                <!-- Developer Intern -->
                 <div class="experience-card">
                   <p class="text-center">
                     <strong>Developer Intern</strong><br>
@@ -479,8 +445,10 @@
               </div>
             </div>
             <div class="col-md-6">
-              <div class="card h-100 p-4"><div class="text-center mb-3"><i class="fas fa-graduation-cap fa-3x text-dark mb-3"></i><h3>Education</h3></div>
-              <p class="text-center">B.E. Electronics and Communication Engineering<br>KGiSL Institute of Technology</p></div>
+              <div class="unified-card">
+                <div class="text-center mb-3"><i class="fas fa-graduation-cap fa-3x text-dark mb-3"></i><h3>Education</h3></div>
+                <p class="text-center">B.E. Electronics and Communication Engineering<br>KGiSL Institute of Technology</p>
+              </div>
             </div>
           </div>
         </div>
@@ -488,28 +456,49 @@
       <a href="#skills" class="arrow-down"><i class="fas fa-chevron-down"></i></a>
     </section>
 
-    <!-- Skills Section -->
+    <!-- Skills Section - inner cards now unified -->
     <section id="skills" class="bg-light position-relative">
       <div class="container">
         <div class="section-header text-center"><p class="text-muted mb-2">My Expertise</p><h2 class="section-heading">Skills</h2></div>
-        <div class="section-content"><div class="card p-4 mb-5"><div class="row">
-          <div class="col-md-4 mb-4"><div class="card h-100 p-3"><div class="text-center mb-3"><i class="fas fa-code fa-3x text-dark mb-3"></i><h3>Programming</h3></div>
-          <div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>Python</h5></div><div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>HTML</h5></div>
-          <div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>CSS</h5></div><div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>Javascript</h5></div>
-          <div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>SQL</h5></div></div></div>
-          <div class="col-md-4 mb-4"><div class="card h-100 p-3"><div class="text-center mb-3"><i class="fas fa-brain fa-3x text-dark mb-3"></i><h3>AI & ML</h3></div>
-          <div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>Artificial Intelligence</h5></div><div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>Machine Learning</h5></div>
-          <div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>Computer Vision</h5></div><div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>Large Language Models</h5></div>
-          <div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>Generative AI</h5></div><div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>Agentic AI</h5></div></div></div>
-          <div class="col-md-4 mb-4"><div class="card h-100 p-3"><div class="text-center mb-3"><i class="fas fa-server fa-3x text-dark mb-3"></i><h3>Technologies</h3></div>
-          <div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>Cloud Deployment (GCP)</h5></div><div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>Flask</h5></div>
-          <div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>Linux</h5></div><div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>RPA</h5></div></div></div>
-        </div></div></div>
+        <div class="section-content">
+          <div class="row g-4">
+            <div class="col-md-4 mb-4">
+              <div class="unified-card">
+                <div class="text-center mb-3"><i class="fas fa-code fa-3x text-dark mb-3"></i><h3>Programming</h3></div>
+                <div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>Python</h5></div>
+                <div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>HTML</h5></div>
+                <div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>CSS</h5></div>
+                <div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>Javascript</h5></div>
+                <div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>SQL</h5></div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="unified-card">
+                <div class="text-center mb-3"><i class="fas fa-brain fa-3x text-dark mb-3"></i><h3>AI & ML</h3></div>
+                <div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>Artificial Intelligence</h5></div>
+                <div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>Machine Learning</h5></div>
+                <div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>Computer Vision</h5></div>
+                <div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>Large Language Models</h5></div>
+                <div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>Generative AI</h5></div>
+                <div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>Agentic AI</h5></div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="unified-card">
+                <div class="text-center mb-3"><i class="fas fa-server fa-3x text-dark mb-3"></i><h3>Technologies</h3></div>
+                <div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>Cloud Deployment (GCP)</h5></div>
+                <div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>Flask</h5></div>
+                <div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>Linux</h5></div>
+                <div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>RPA</h5></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <a href="#projects" class="arrow-down"><i class="fas fa-chevron-down"></i></a>
     </section>
 
-    <!-- Projects Section (full details) -->
+    <!-- Projects Section - already uses project-item with same style, kept as is -->
     <section id="projects" class="position-relative">
       <div class="container">
         <div class="section-header text-center">
@@ -529,7 +518,6 @@
                 <b>End-to-End Workflow:</b> Established a complete lifecycle for permit requests—from creation to approval, extension, and closure—ensuring transparency and traceability.
               </p>
             </div>
-
             <div class="project-item">
               <h4 class="project-title">Finance Agent - Agentic RAG Application</h4>
               <p class="company-name">KGiSL</p>
@@ -542,7 +530,6 @@
                 <b>Streamlit-based Interactive UI:</b> Developed a simple, intuitive interface allowing users to upload multiple vendor SOW files and interact seamlessly with the AI.
               </p>
             </div>
-
             <div class="project-item">
               <h4 class="project-title">Aztrabot and Aztracore</h4>
               <p class="company-name">Bejawar Innovative Technologies</p>
@@ -554,7 +541,6 @@
                 <b>Designed Dynamic User Interface:</b> Crafted an engaging and user-friendly interface using HTML, CSS, JavaScript, and Flask to improve user experience.
               </p>
             </div>
-            
             <div class="project-item">
               <h4 class="project-title">Augmented Question Answering System for Biomedical Literature Retrieval using Language Models and PubMed Integration</h4>
               <p class="company-name">KGiSL Institute of Technology</p>
@@ -564,7 +550,6 @@
                 <b>User Engagement:</b> Streamlit's interface facilitated intuitive interaction with the AI assistant for biomedical information retrieval.
               </p>
             </div>
-            
             <div class="project-item">
               <h4 class="project-title">Open AI Chatbot</h4>
               <p class="company-name">KGiSL Institute of Technology</p>
@@ -575,7 +560,6 @@
                 <b>Efficient Workflow:</b> Facilitated easy PDF downloads, improving user interaction and document management.
               </p>
             </div>
-
             <div class="project-item">
               <h4 class="project-title">Spelling Correction Bot</h4>
               <p class="company-name">KGiSL Institute of Technology</p>
@@ -592,19 +576,47 @@
       <a href="#achievements" class="arrow-down"><i class="fas fa-chevron-down"></i></a>
     </section>
 
-    <!-- Achievements Section -->
+    <!-- Achievements Section - now using unified-card -->
     <section id="achievements" class="bg-light position-relative">
-      <div class="container"><div class="section-header text-center"><p class="text-muted mb-2">Recognition & Awards</p><h2 class="section-heading">Achievements</h2></div>
-      <div class="section-content"><div class="card p-4"><div class="row">
-        <div class="col-md-6 mb-4"><div class="achievement-card"><h4 class="achievement-title">Winner - UiPath SKILL-A-THON 2022</h4><p>Created three bots integrating ChatGPT with RPA and Excel.</p><p class="achievement-date">2022</p></div></div>
-        <div class="col-md-6 mb-4"><div class="achievement-card"><h4 class="achievement-title">Special Achievers - Annual Day 2024</h4><p>Recognized for outstanding contributions.</p><p class="achievement-date">2024</p></div></div>
-        <div class="col-md-6 mb-4"><div class="achievement-card"><h4 class="achievement-title">Highest Coursera Certificates - ECE Dept 2024</h4><p>Maximum Coursera certifications in the department.</p><p class="achievement-date">2024</p></div></div>
-        <div class="col-md-6 mb-4"><div class="achievement-card"><h4 class="achievement-title">Top2 - Mixed Signal SoC design Marathon (eSim & SKY130) 2022</h4><p>PWM Increment Circuit.</p><p class="achievement-date">2022</p></div></div>
-      </div></div></div></div>
+      <div class="container">
+        <div class="section-header text-center"><p class="text-muted mb-2">Recognition & Awards</p><h2 class="section-heading">Achievements</h2></div>
+        <div class="section-content">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="unified-card">
+                <h4 class="achievement-title">Winner - UiPath SKILL-A-THON 2022</h4>
+                <p>Created three bots integrating ChatGPT with RPA and Excel.</p>
+                <p class="achievement-date">2022</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="unified-card">
+                <h4 class="achievement-title">Special Achievers - Annual Day 2024</h4>
+                <p>Recognized for outstanding contributions.</p>
+                <p class="achievement-date">2024</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="unified-card">
+                <h4 class="achievement-title">Highest Coursera Certificates - ECE Dept 2024</h4>
+                <p>Maximum Coursera certifications in the department.</p>
+                <p class="achievement-date">2024</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="unified-card">
+                <h4 class="achievement-title">Top2 - Mixed Signal SoC design Marathon (eSim & SKY130) 2022</h4>
+                <p>PWM Increment Circuit.</p>
+                <p class="achievement-date">2022</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <a href="#testimonials" class="arrow-down"><i class="fas fa-chevron-down"></i></a>
     </section>
 
-    <!-- Testimonials Section -->
+    <!-- Testimonials Section (already matching the design) -->
     <section id="testimonials" class="position-relative">
       <div class="container">
         <div class="section-header text-center">
@@ -695,15 +707,36 @@
       <a href="#contact" class="arrow-down"><i class="fas fa-chevron-down"></i></a>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact Section - now using unified-card -->
     <section id="contact" class="bg-light">
-      <div class="container"><div class="section-header text-center"><p class="text-muted mb-2">Get in Touch</p><h2 class="section-heading">Contact Me</h2></div>
-      <div class="section-content"><div class="row justify-content-center"><div class="col-lg-8"><div class="card p-4"><div class="row">
-        <div class="col-md-6 mb-3 mb-md-0"><a href="mailto:dhilipsubramanian2002@gmail.com" class="contact-link"><i class="fas fa-envelope contact-icon"></i><span>Email</span></a></div>
-        <div class="col-md-6 mb-3 mb-md-0"><a href="https://www.linkedin.com/in/dhilip-s-62ab26200/" target="_blank" class="contact-link"><i class="fab fa-linkedin contact-icon"></i><span>LinkedIn</span></a></div>
-        <div class="col-md-6 mb-3 mb-md-0"><a href="https://medium.com/@dhilip2002" target="_blank" class="contact-link"><i class="fab fa-medium contact-icon"></i><span>Medium</span></a></div>
-        <div class="col-md-6"><a href="https://www.youtube.com/@dhilips3913" target="_blank" class="contact-link"><i class="fab fa-youtube contact-icon"></i><span>YouTube</span></a></div>
-      </div></div></div></div></div></div>
+      <div class="container">
+        <div class="section-header text-center">
+          <p class="text-muted mb-2">Get in Touch</p>
+          <h2 class="section-heading">Contact Me</h2>
+        </div>
+        <div class="section-content">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="unified-card">
+                <div class="row">
+                  <div class="col-md-6 mb-3 mb-md-0">
+                    <a href="mailto:dhilipsubramanian2002@gmail.com" class="contact-link"><i class="fas fa-envelope contact-icon"></i><span>Email</span></a>
+                  </div>
+                  <div class="col-md-6 mb-3 mb-md-0">
+                    <a href="https://www.linkedin.com/in/dhilip-s-62ab26200/" target="_blank" class="contact-link"><i class="fab fa-linkedin contact-icon"></i><span>LinkedIn</span></a>
+                  </div>
+                  <div class="col-md-6 mb-3 mb-md-0">
+                    <a href="https://medium.com/@dhilip2002" target="_blank" class="contact-link"><i class="fab fa-medium contact-icon"></i><span>Medium</span></a>
+                  </div>
+                  <div class="col-md-6">
+                    <a href="https://www.youtube.com/@dhilips3913" target="_blank" class="contact-link"><i class="fab fa-youtube contact-icon"></i><span>YouTube</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
@@ -735,11 +768,9 @@
         const juniorStart = new Date('2025-09-01');
         let juniorMonths = (new Date().getFullYear() - juniorStart.getFullYear()) * 12 + (new Date().getMonth() - juniorStart.getMonth());
         document.getElementById('junior-associate-duration').innerText = formatDuration(Math.max(0, juniorMonths));
-        
         const traineeStart = new Date('2024-10-07'), traineeEnd = new Date('2025-08-31');
         let traineeMonths = (traineeEnd.getFullYear() - traineeStart.getFullYear()) * 12 + (traineeEnd.getMonth() - traineeStart.getMonth());
         document.getElementById('kgisl-duration').innerText = formatDuration(traineeMonths);
-        
         const bejStart = new Date('2023-06-20'), bejEnd = new Date('2024-02-14');
         let bejMonths = (bejEnd.getFullYear() - bejStart.getFullYear()) * 12 + (bejEnd.getMonth() - bejStart.getMonth());
         document.getElementById('bejawar-duration').innerText = formatDuration(bejMonths);
