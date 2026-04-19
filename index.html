@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <style>
-      /* Custom Styles */
+      /* Custom Styles - exactly as original */
       body {
         font-family: 'Poppins', sans-serif;
         scroll-behavior: smooth;
@@ -192,7 +192,6 @@
         .profile-section {
           text-align: center;
         }
-        
         .profile-image {
           margin-bottom: 2rem;
         }
@@ -258,7 +257,6 @@
         margin-bottom: 30px;
       }
 
-      /* Achievement styles */
       .achievement-card {
         margin-bottom: 1.5rem;
         padding: 1.5rem;
@@ -275,11 +273,6 @@
         color: #6c757d;
       }
       
-      /* Project section styles */
-      .project-section {
-        background-color: #f8f9fa;
-      }
-      
       .project-container {
         max-width: 800px;
         margin: 0 auto;
@@ -290,6 +283,68 @@
         font-size: 1.1rem;
         margin-bottom: 1.5rem;
         line-height: 1.6;
+      }
+
+      /* Testimonial style (like image.png) */
+      .testimonial-card-new {
+        background: #ffffff;
+        border-radius: 1rem;
+        padding: 1.5rem;
+        margin-bottom: 1.8rem;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        border-left: 4px solid #000000;
+        transition: all 0.2s;
+      }
+      .testimonial-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        flex-wrap: wrap;
+        margin-bottom: 0.75rem;
+      }
+      .testimonial-name {
+        font-weight: 700;
+        font-size: 1.2rem;
+        margin-bottom: 0.2rem;
+      }
+      .testimonial-role {
+        font-size: 0.85rem;
+        color: #6c757d;
+        margin-bottom: 0;
+      }
+      .testimonial-date {
+        font-size: 0.8rem;
+        color: #6c757d;
+        white-space: nowrap;
+      }
+      .testimonial-quote-new {
+        font-style: italic;
+        margin: 1rem 0 0.8rem 0;
+        line-height: 1.5;
+        color: #212529;
+      }
+      .testimonial-footer {
+        font-size: 0.75rem;
+        color: #6c757d;
+        border-top: 1px solid #e9ecef;
+        padding-top: 0.7rem;
+        margin-top: 0.5rem;
+      }
+      @media (max-width: 768px) {
+        .testimonial-header {
+          flex-direction: column;
+        }
+        .testimonial-date {
+          margin-top: 0.3rem;
+        }
+      }
+
+      /* Custom style for COE note under Junior Associate */
+      .coe-note {
+        font-size: 0.85rem;
+        color: #444;
+        display: inline-block;
+        margin-top: 0.25rem;
       }
     </style>
   </head>
@@ -303,24 +358,13 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#experience">Experience</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#skills">Skills</a>
-              </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#projects">Projects</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#achievements">Achievements</a>
-              </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
+            <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -337,32 +381,22 @@
             <div class="text-center text-lg-start">
               <p class="text-muted mb-2 fs-5">Hello, I'm</p>
               <h1 class="display-3 fw-bold mb-3">Dhilip S</h1>
-              <p class="fs-4 mb-4">AI/ML Developer | Python Developer | Artificial Intelligence | Machine Learning | Gen AI | Agentic AI</p>
+              <p class="fs-4 mb-4">AI/ML Developer | Python Developer | Artificial Intelligence | Machine Learning | Gen AI | Agentic AI | Center of Excellence (CoE) Member</p>
               <div class="d-flex justify-content-center justify-content-lg-start mb-4">
                 <a href="./assets/resume.pdf" class="btn btn-outline-dark btn-custom me-3" download>Download CV</a>
                 <a href="#contact" class="btn btn-dark btn-custom">Contact Info</a>
               </div>
               <div class="d-flex justify-content-center justify-content-lg-start">
-                <a href="https://www.linkedin.com/in/dhilip-s-62ab26200/" target="_blank" class="social-icon">
-                  <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/Dhilip2002" target="_blank" class="social-icon">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="https://medium.com/@dhilip2002" target="_blank" class="social-icon">
-                  <i class="fab fa-medium"></i>
-                </a>
-                <a href="https://www.youtube.com/@dhilips3913" target="_blank" class="social-icon">
-                  <i class="fab fa-youtube"></i>
-                </a>
+                <a href="https://www.linkedin.com/in/dhilip-s-62ab26200/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Dhilip2002" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://medium.com/@dhilip2002" target="_blank" class="social-icon"><i class="fab fa-medium"></i></a>
+                <a href="https://www.youtube.com/@dhilips3913" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <a href="#about" class="arrow-down">
-        <i class="fas fa-chevron-down"></i>
-      </a>
+      <a href="#about" class="arrow-down"><i class="fas fa-chevron-down"></i></a>
     </section>
 
     <!-- About Section -->
@@ -372,93 +406,60 @@
           <p class="text-muted mb-2">Get To Know More</p>
           <h2 class="section-heading">About Me</h2>
         </div>
-        
         <div class="section-content">
           <div class="card p-4">
-            <p class="headline text-center">
-              𝐀𝐈 & 𝐌𝐋 𝐄𝐧𝐠𝐢𝐧𝐞𝐞𝐫 | 𝐀𝐠𝐞𝐧𝐭𝐢𝐜 𝐀𝐈 | 𝐃𝐨𝐜𝐮𝐦𝐞𝐧𝐭 𝐈𝐧𝐭𝐞𝐥𝐥𝐢𝐠𝐞𝐧𝐜𝐞 | 𝐑𝐀𝐆 | 𝐋𝐋𝐌 𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐨𝐧
-            </p>
-            
-            <p class="about-text">
-              AI & ML Engineer with 1+ year of hands-on industry experience designing and deploying AI-driven, agentic automation solutions across document-intensive and enterprise workflows. I specialize in building scalable, production-ready AI systems using LLMs, RAG architectures, OCR, and Multi-Agent Frameworks to deliver measurable business impact.
-            </p>
-            
+            <p class="headline text-center">𝐀𝐈 & 𝐌𝐋 𝐄𝐧𝐠𝐢𝐧𝐞𝐞𝐫 | 𝐀𝐠𝐞𝐧𝐭𝐢𝐜 𝐀𝐈 | 𝐃𝐨𝐜𝐮𝐦𝐞𝐧𝐭 𝐈𝐧𝐭𝐞𝐥𝐥𝐢𝐠𝐞𝐧𝐜𝐞 | 𝐑𝐀𝐆 | 𝐋𝐋𝐌 𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐨𝐧 | 𝐂𝐞𝐧𝐭𝐞𝐫 𝐨𝐟 𝐄𝐱𝐜𝐞𝐥𝐥𝐞𝐧𝐜𝐞 (𝐂𝐨𝐄)</p>
+            <p class="about-text">AI & ML Engineer with 1+ year of hands-on industry experience designing and deploying AI-driven, agentic automation solutions across document-intensive and enterprise workflows. I specialize in building scalable, production-ready AI systems using LLMs, RAG architectures, OCR, and Multi-Agent Frameworks to deliver measurable business impact.</p>
             <h5 class="about-heading">𝐀𝐈-𝐃𝐫𝐢𝐯𝐞𝐧 𝐃𝐨𝐜𝐮𝐦𝐞𝐧𝐭 𝐈𝐧𝐭𝐞𝐥𝐥𝐢𝐠𝐞𝐧𝐜𝐞:</h5>
-            <p class="about-text">
-              Designed and deployed Python-based AI/ML solutions leveraging LLMs, OCR, NLP, and RAG pipelines to automate document understanding, data extraction, classification, and decision workflows.
-            </p>
-            
+            <p class="about-text">Designed and deployed Python-based AI/ML solutions leveraging LLMs, OCR, NLP, and RAG pipelines to automate document understanding, data extraction, classification, and decision workflows.</p>
             <h5 class="about-heading">𝐀𝐠𝐞𝐧𝐭𝐢𝐜 & 𝐌𝐮𝐥𝐭𝐢-𝐀𝐠𝐞𝐧𝐭 𝐒𝐲𝐬𝐭𝐞𝐦𝐬:</h5>
-            <p class="about-text">
-              Built LangGraph-powered multi-agent workflows for PO–Invoice comparison, mismatch detection, and dispute identification, enabling high-accuracy automated processing.
-            </p>
-            
+            <p class="about-text">Built LangGraph-powered multi-agent workflows for PO–Invoice comparison, mismatch detection, and dispute identification, enabling high-accuracy automated processing.</p>
             <h5 class="about-heading">𝐄𝐧𝐝-𝐭𝐨-𝐄𝐧𝐝 𝐈𝐧𝐭𝐞𝐥𝐥𝐢𝐠𝐞𝐧𝐭 𝐏𝐢𝐩𝐞𝐥𝐢𝐧𝐞𝐬:</h5>
-            <p class="about-text">
-              Implemented integrated pipelines combining embeddings, vector databases, OCR preprocessing, and LLM reasoning, improving document intelligence and operational efficiency.
-            </p>
-            
+            <p class="about-text">Implemented integrated pipelines combining embeddings, vector databases, OCR preprocessing, and LLM reasoning, improving document intelligence and operational efficiency.</p>
             <h5 class="about-heading">𝐌𝐨𝐝𝐞𝐥 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐦𝐞𝐧𝐭 & 𝐅𝐢𝐧𝐞-𝐓𝐮𝐧𝐢𝐧𝐠:</h5>
-            <p class="about-text">
-              Developed and fine-tuned forecasting, classification, NLP, and computer vision models, achieving up to 15% accuracy improvement and 40% reduction in manual review effort.
-            </p>
-            
+            <p class="about-text">Developed and fine-tuned forecasting, classification, NLP, and computer vision models, achieving up to 15% accuracy improvement and 40% reduction in manual review effort.</p>
             <h5 class="about-heading">𝐑𝐀𝐆 & 𝐀𝐠𝐞𝐧𝐭𝐢𝐜 𝐑𝐀𝐆 𝐀𝐫𝐜𝐡𝐢𝐭𝐞𝐜𝐭𝐮𝐫𝐞𝐬:</h5>
-            <p class="about-text">
-              Engineered context-aware retrieval systems for intelligent query answering, improving response relevance and reliability.
-            </p>
-            
+            <p class="about-text">Engineered context-aware retrieval systems for intelligent query answering, improving response relevance and reliability.</p>
             <h5 class="about-heading">𝐄𝐧𝐭𝐞𝐫𝐩𝐫𝐢𝐬𝐞 𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐨𝐧 & 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦𝐬:</h5>
-            <p class="about-text">
-              Delivered secure, role-based automation solutions using Power Pages, Power Automate, SharePoint, Azure Entra ID, and UiPath, including end-to-end permit management systems.
-            </p>
-            
+            <p class="about-text">Delivered secure, role-based automation solutions using Power Pages, Power Automate, SharePoint, Azure Entra ID, and UiPath, including end-to-end permit management systems.</p>
             <h5 class="about-heading">𝐑𝐞𝐜𝐞𝐧𝐭 𝐀𝐜𝐡𝐢𝐞𝐯𝐞𝐦𝐞𝐧𝐭𝐬:</h5>
             <ul class="achievement-list">
+              <li><strong>Active member of Center of Excellence (CoE) - KGiSL</strong> (AI & Automation Developer)</li>
               <li>Built Agentic AI and RAG solutions within a 𝐂𝐞𝐧𝐭𝐞𝐫 𝐨𝐟 𝐄𝐱𝐜𝐞𝐥𝐥𝐞𝐧𝐜𝐞 (𝐂𝐨𝐄) environment</li>
               <li>Achieved up to 90% OCR extraction accuracy across structured, unstructured, and handwritten documents</li>
               <li>Delivered AI solutions adopted in real business workflows</li>
               <li><strong>Certifications:</strong> Microsoft Certified – Azure AI Engineer Associate (AI-102) | UiPath Certified Professional – Agentic Automation Associate (UiPath-AAAv1)</li>
             </ul>
-            
-            <p class="about-text mt-4">
-              I am passionate about building real-world, scalable AI systems that combine LLMs, Agentic Reasoning, Automation, and enterprise security. I enjoy working at the intersection of AI engineering, document intelligence, and intelligent automation, and I am driven to contribute to impactful, future-ready solutions.
-            </p>
           </div>
         </div>
       </div>
-      <a href="#experience" class="arrow-down">
-        <i class="fas fa-chevron-down"></i>
-      </a>
+      <a href="#experience" class="arrow-down"><i class="fas fa-chevron-down"></i></a>
     </section>
 
-    <!-- Experience Section -->
+    <!-- Experience Section (COE now as a note under Junior Associate with custom color) -->
     <section id="experience" class="position-relative">
       <div class="container">
         <div class="section-header text-center">
           <p class="text-muted mb-2">Explore My</p>
           <h2 class="section-heading">Experience</h2>
         </div>
-        
         <div class="section-content">
           <div class="row mb-5">
             <div class="col-md-6 mb-4 mb-md-0">
               <div class="card h-100 p-4">
-                <div class="text-center mb-3">
-                  <i class="fas fa-briefcase fa-3x text-dark mb-3"></i>
-                  <h3>Experience</h3>
-                </div>
+                <div class="text-center mb-3"><i class="fas fa-briefcase fa-3x text-dark mb-3"></i><h3>Experience</h3></div>
                 
-                <!-- Junior Associate Experience -->
+                <!-- Junior Associate with COE note (now using coe-note class) -->
                 <div class="experience-card">
                   <p class="text-center">
                     <strong>Junior Associate</strong><br>
                     KGiSL<br>
                     Sep 2025 - Present (<span id="junior-associate-duration"></span>)<br>
+                    <span class="coe-note">Also serving as AI & Automation Developer – Center of Excellence (COE)</span>
                   </p>
                 </div>
                 
-                <!-- Trainee Experience -->
+                <!-- Trainee -->
                 <div class="experience-card">
                   <p class="text-center">
                     <strong>Trainee</strong><br>
@@ -467,7 +468,7 @@
                   </p>
                 </div>
                 
-                <!-- Bejawar Experience -->
+                <!-- Developer Intern -->
                 <div class="experience-card">
                   <p class="text-center">
                     <strong>Developer Intern</strong><br>
@@ -478,142 +479,45 @@
               </div>
             </div>
             <div class="col-md-6">
-              <div class="card h-100 p-4">
-                <div class="text-center mb-3">
-                  <i class="fas fa-graduation-cap fa-3x text-dark mb-3"></i>
-                  <h3>Education</h3>
-                </div>
-                <p class="text-center">
-                  B.E. Electronics and Communication Engineering<br>
-                  KGiSL Institute of Technology
-                </p>
-              </div>
+              <div class="card h-100 p-4"><div class="text-center mb-3"><i class="fas fa-graduation-cap fa-3x text-dark mb-3"></i><h3>Education</h3></div>
+              <p class="text-center">B.E. Electronics and Communication Engineering<br>KGiSL Institute of Technology</p></div>
             </div>
           </div>
         </div>
       </div>
-      <a href="#skills" class="arrow-down">
-        <i class="fas fa-chevron-down"></i>
-      </a>
+      <a href="#skills" class="arrow-down"><i class="fas fa-chevron-down"></i></a>
     </section>
 
     <!-- Skills Section -->
     <section id="skills" class="bg-light position-relative">
       <div class="container">
-        <div class="section-header text-center">
-          <p class="text-muted mb-2">My Expertise</p>
-          <h2 class="section-heading">Skills</h2>
-        </div>
-        
-        <div class="section-content">
-          <div class="card p-4 mb-5">
-            <div class="row">
-              <div class="col-md-4 mb-4">
-                <div class="card h-100 p-3">
-                  <div class="text-center mb-3">
-                    <i class="fas fa-code fa-3x text-dark mb-3"></i>
-                    <h3>Programming</h3>
-                  </div>
-                  <div class="experience-item">
-                    <i class="fas fa-check-circle experience-icon"></i>
-                    <h5>Python</h5>
-                  </div>
-                  <div class="experience-item">
-                    <i class="fas fa-check-circle experience-icon"></i>
-                    <h5>HTML</h5>
-                  </div>
-                  <div class="experience-item">
-                    <i class="fas fa-check-circle experience-icon"></i>
-                    <h5>CSS</h5>
-                  </div>
-                  <div class="experience-item">
-                    <i class="fas fa-check-circle experience-icon"></i>
-                    <h5>Javascript</h5>
-                  </div>
-                  <div class="experience-item">
-                    <i class="fas fa-check-circle experience-icon"></i>
-                    <h5>SQL</h5>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="col-md-4 mb-4">
-                <div class="card h-100 p-3">
-                  <div class="text-center mb-3">
-                    <i class="fas fa-brain fa-3x text-dark mb-3"></i>
-                    <h3>AI & ML</h3>
-                  </div>
-                  <div class="experience-item">
-                    <i class="fas fa-check-circle experience-icon"></i>
-                    <h5>Artificial Intelligence</h5>
-                  </div>
-                  <div class="experience-item">
-                    <i class="fas fa-check-circle experience-icon"></i>
-                    <h5>Machine Learning</h5>
-                  </div>
-                  <div class="experience-item">
-                    <i class="fas fa-check-circle experience-icon"></i>
-                    <h5>Computer Vision</h5>
-                  </div>
-                  <div class="experience-item">
-                    <i class="fas fa-check-circle experience-icon"></i>
-                    <h5>Large Language Models</h5>
-                  </div>
-                  <div class="experience-item">
-                    <i class="fas fa-check-circle experience-icon"></i>
-                    <h5>Generative AI</h5>
-                  </div>
-                  <div class="experience-item">
-                    <i class="fas fa-check-circle experience-icon"></i>
-                    <h5>Agentic AI</h5>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="col-md-4 mb-4">
-                <div class="card h-100 p-3">
-                  <div class="text-center mb-3">
-                    <i class="fas fa-server fa-3x text-dark mb-3"></i>
-                    <h3>Technologies</h3>
-                  </div>
-                  <div class="experience-item">
-                    <i class="fas fa-check-circle experience-icon"></i>
-                    <h5>Cloud Deployment (GCP)</h5>
-                  </div>
-                  <div class="experience-item">
-                    <i class="fas fa-check-circle experience-icon"></i>
-                    <h5>Flask</h5>
-                  </div>
-                  <div class="experience-item">
-                    <i class="fas fa-check-circle experience-icon"></i>
-                    <h5>Linux</h5>
-                  </div>
-                  <div class="experience-item">
-                    <i class="fas fa-check-circle experience-icon"></i>
-                    <h5>RPA</h5>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="section-header text-center"><p class="text-muted mb-2">My Expertise</p><h2 class="section-heading">Skills</h2></div>
+        <div class="section-content"><div class="card p-4 mb-5"><div class="row">
+          <div class="col-md-4 mb-4"><div class="card h-100 p-3"><div class="text-center mb-3"><i class="fas fa-code fa-3x text-dark mb-3"></i><h3>Programming</h3></div>
+          <div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>Python</h5></div><div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>HTML</h5></div>
+          <div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>CSS</h5></div><div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>Javascript</h5></div>
+          <div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>SQL</h5></div></div></div>
+          <div class="col-md-4 mb-4"><div class="card h-100 p-3"><div class="text-center mb-3"><i class="fas fa-brain fa-3x text-dark mb-3"></i><h3>AI & ML</h3></div>
+          <div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>Artificial Intelligence</h5></div><div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>Machine Learning</h5></div>
+          <div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>Computer Vision</h5></div><div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>Large Language Models</h5></div>
+          <div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>Generative AI</h5></div><div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>Agentic AI</h5></div></div></div>
+          <div class="col-md-4 mb-4"><div class="card h-100 p-3"><div class="text-center mb-3"><i class="fas fa-server fa-3x text-dark mb-3"></i><h3>Technologies</h3></div>
+          <div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>Cloud Deployment (GCP)</h5></div><div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>Flask</h5></div>
+          <div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>Linux</h5></div><div class="experience-item"><i class="fas fa-check-circle experience-icon"></i><h5>RPA</h5></div></div></div>
+        </div></div></div>
       </div>
-      <a href="#projects" class="arrow-down">
-        <i class="fas fa-chevron-down"></i>
-      </a>
+      <a href="#projects" class="arrow-down"><i class="fas fa-chevron-down"></i></a>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Projects Section (full details) -->
     <section id="projects" class="position-relative">
       <div class="container">
         <div class="section-header text-center">
           <p class="text-muted mb-2">Browse My Recent</p>
           <h2 class="section-heading">Projects</h2>
         </div>
-        
         <div class="section-content">
           <div class="project-container">
-
             <div class="project-item">
               <h4 class="project-title">Digital Forms</h4>
               <p class="company-name">KGiSL</p>
@@ -685,274 +589,163 @@
           </div>
         </div>
       </div>
-      <a href="#achievements" class="arrow-down">
-        <i class="fas fa-chevron-down"></i>
-      </a>
+      <a href="#achievements" class="arrow-down"><i class="fas fa-chevron-down"></i></a>
     </section>
 
     <!-- Achievements Section -->
     <section id="achievements" class="bg-light position-relative">
-        <div class="container">
-          <div class="section-header text-center">
-            <p class="text-muted mb-2">Recognition & Awards</p>
-            <h2 class="section-heading">Achievements</h2>
-          </div>
-          
-          <div class="section-content">
-            <div class="card p-4">
-              <div class="row">
-                <div class="col-md-6 mb-4">
-                  <div class="achievement-card">
-                    <h4 class="achievement-title">Winner in Uipath Citizen Developer SKILL-A-THON - 2022</h4>
-                    <p class="achievement-date">2022</p>
-                    <p>Created three bots integrating ChatGPT with RPA and Excel, demonstrating innovative automation solutions.</p>
-                  </div>
+      <div class="container"><div class="section-header text-center"><p class="text-muted mb-2">Recognition & Awards</p><h2 class="section-heading">Achievements</h2></div>
+      <div class="section-content"><div class="card p-4"><div class="row">
+        <div class="col-md-6 mb-4"><div class="achievement-card"><h4 class="achievement-title">Winner - UiPath SKILL-A-THON 2022</h4><p>Created three bots integrating ChatGPT with RPA and Excel.</p><p class="achievement-date">2022</p></div></div>
+        <div class="col-md-6 mb-4"><div class="achievement-card"><h4 class="achievement-title">Special Achievers - Annual Day 2024</h4><p>Recognized for outstanding contributions.</p><p class="achievement-date">2024</p></div></div>
+        <div class="col-md-6 mb-4"><div class="achievement-card"><h4 class="achievement-title">Highest Coursera Certificates - ECE Dept 2024</h4><p>Maximum Coursera certifications in the department.</p><p class="achievement-date">2024</p></div></div>
+        <div class="col-md-6 mb-4"><div class="achievement-card"><h4 class="achievement-title">Top2 - Mixed Signal SoC design Marathon (eSim & SKY130) 2022</h4><p>PWM Increment Circuit.</p><p class="achievement-date">2022</p></div></div>
+      </div></div></div></div>
+      <a href="#testimonials" class="arrow-down"><i class="fas fa-chevron-down"></i></a>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="position-relative">
+      <div class="container">
+        <div class="section-header text-center">
+          <p class="text-muted mb-2">Kind words from leadership</p>
+          <h2 class="section-heading">Testimonials</h2>
+        </div>
+        <div class="section-content">
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <div class="testimonial-card-new">
+                <div class="testimonial-header">
+                  <div><div class="testimonial-name">Sundar Kumar Murali</div><div class="testimonial-role">Associate Director - Sales, KGiSL</div></div>
+                  <div class="testimonial-date">March 24, 2026</div>
                 </div>
-                
-                <div class="col-md-6 mb-4">
-                  <div class="achievement-card">
-                    <h4 class="achievement-title">Special Achievers - Annual Day - 2024</h4>
-                    <p class="achievement-date">2024</p>
-                    <p>Recognized for outstanding contributions and achievements throughout the academic year.</p>
-                  </div>
+                <div class="testimonial-quote-new">“Many congratulations on achieving this. Keep it going.”</div>
+                <div class="testimonial-footer">Certification Completion – Microsoft Certified: Azure AI Engineer Associate (AI-102)</div>
+              </div>
+              <div class="testimonial-card-new">
+                <div class="testimonial-header">
+                  <div><div class="testimonial-name">Harishbabu Suresh</div><div class="testimonial-role">Project Manager | Intelligent Automation Group, KGiSL</div></div>
+                  <div class="testimonial-date">March 23, 2026</div>
                 </div>
-                
-                <div class="col-md-6 mb-4">
-                  <div class="achievement-card">
-                    <h4 class="achievement-title">Highest Coursera Certificate Received - ECE Dept - Annual Day - 2024</h4>
-                    <p class="achievement-date">2024</p>
-                    <p>Acknowledged for obtaining the maximum number of Coursera certifications in the ECE department.</p>
-                  </div>
+                <div class="testimonial-quote-new">
+                  “Congratulations! I truly appreciate your efforts and your willingness to go beyond your comfort zone. Keep up the great work.<br><br>
+                  I would also encourage you to gain hands-on experience in <strong>Agentic Automation using Copilot Studio and Azure AI Foundry</strong>, so that we can consider you for upcoming AI Engineer opportunities.<br><br>
+                  As discussed, please proceed with upskilling the identified team members in <strong>Agentic Automation using Python and Azure</strong>.”
                 </div>
-                
-                <div class="col-md-6 mb-4">
-                  <div class="achievement-card">
-                    <h4 class="achievement-title">Winner Top2 (Good) in Mixed Signal SoC design Marathon using eSim and SKY130 - 2022</h4>
-                    <p class="achievement-date">2022</p>
-                    <p>Created a PWM Increment Circuit using eSim and SKY130, placing among the top performers.</p>
-                  </div>
+                <div class="testimonial-footer">Certification Completion – Microsoft Certified: Azure AI Engineer Associate (AI-102)</div>
+              </div>
+              <div class="testimonial-card-new">
+                <div class="testimonial-header">
+                  <div><div class="testimonial-name">Krishna Viswanathan</div><div class="testimonial-role">Director, KGiSL</div></div>
+                  <div class="testimonial-date">January 5, 2026</div>
                 </div>
-                
-                <div class="col-md-6 mb-4">
-                  <div class="achievement-card">
-                    <h4 class="achievement-title">Winner Top4 (Good) in Mixed Signal Circuit Design and Simulation Marathon using eSim - 2022</h4>
-                    <p class="achievement-date">2022</p>
-                    <p>Recognized for excellence in mixed signal circuit design and simulation using eSim tools.</p>
-                  </div>
+                <div class="testimonial-quote-new">“Congratulations. We want to make few Agentic AI agents and keep it ready. So that I can talk to Uipath sales team and we can build the confidence about our capability to them.”</div>
+                <div class="testimonial-footer">Certification Completion – UiPath Agentic Automation Associate (Uipath-AAAv1)</div>
+              </div>
+              <div class="testimonial-card-new">
+                <div class="testimonial-header">
+                  <div><div class="testimonial-name">Felix Charles</div><div class="testimonial-role">Director, KGiSL</div></div>
+                  <div class="testimonial-date">September 2025</div>
                 </div>
+                <div class="testimonial-quote-new">“I truly appreciate the hard work you guys have put in overnight to get this to shape. Thank you for your dedication team!!! Lets ensure the demo gets completed successfully today with client.”</div>
+                <div class="testimonial-footer">Appreciation for Outstanding Commitment - Power Pages Project</div>
+              </div>
+              <div class="testimonial-card-new">
+                <div class="testimonial-header">
+                  <div><div class="testimonial-name">Harishbabu Suresh</div><div class="testimonial-role">Project Manager | Solution Architect, Intelligent Automation Group, KGiSL</div></div>
+                  <div class="testimonial-date">September 2025</div>
+                </div>
+                <div class="testimonial-quote-new">
+                  “I would like to formally acknowledge and appreciate the <strong>exceptional effort</strong> put in by <strong>Cibiya, Dhilip, Radha, and Nithin</strong>.<br><br>
+                  They dedicated <strong>continuous 8 hours of effort during the late-night call from 8 PM</strong>, ensuring that critical issues were addressed promptly. A special mention to <strong>Dhilip and Cibiya</strong>, who worked in the office until 7 PM before joining the call and continuing late into the night.<br><br>
+                  They have been consistently putting in <strong>extended hours</strong>, including weekends, to support the project. They have continuously worked over the weekends for the past three weeks.<br><br>
+                  Their commitment, teamwork, and dedication to resolving the issues are truly commendable and set a great example for the rest of the team.<br><br>
+                  Cibiya C & Dhilip Subramanian, <strong>You guys are great. This level of dedication will lead you guys to higher level. Keep it up.</strong>”
+                </div>
+                <div class="testimonial-footer">Appreciation for Outstanding Commitment – Power Pages Project</div>
+              </div>
+              <div class="testimonial-card-new">
+                <div class="testimonial-header">
+                  <div><div class="testimonial-name">Krishna Viswanathan</div><div class="testimonial-role">Director, KGiSL</div></div>
+                  <div class="testimonial-date">September 12, 2025</div>
+                </div>
+                <div class="testimonial-quote-new">“Great team work.”</div>
+                <div class="testimonial-footer">Appreciation for Outstanding Commitment - Power Pages Project</div>
+              </div>
+              <div class="testimonial-card-new">
+                <div class="testimonial-header">
+                  <div><div class="testimonial-name">Felix Charles</div><div class="testimonial-role">Director, KGiSL</div></div>
+                  <div class="testimonial-date">July 13, 2025</div>
+                </div>
+                <div class="testimonial-quote-new">“Good job Dhilip Subramanian.”</div>
+                <div class="testimonial-footer">Finance Agent Setup</div>
+              </div>
+              <div class="testimonial-card-new">
+                <div class="testimonial-header">
+                  <div><div class="testimonial-name">Harishbabu Suresh</div><div class="testimonial-role">Project Manager, KGiSL</div></div>
+                  <div class="testimonial-date">July 12, 2025</div>
+                </div>
+                <div class="testimonial-quote-new">“Hi Dhilip Subramanian, thank you for spending almost 4 hours setting up the llm and deploying the finance agent in my personal laptop.”</div>
+                <div class="testimonial-footer">Finance Agent Setup</div>
               </div>
             </div>
           </div>
         </div>
-        <a href="#contact" class="arrow-down">
-          <i class="fas fa-chevron-down"></i>
-        </a>
-      </section>
+      </div>
+      <a href="#contact" class="arrow-down"><i class="fas fa-chevron-down"></i></a>
+    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="bg-light">
-      <div class="container">
-        <div class="section-header text-center">
-          <p class="text-muted mb-2">Get in Touch</p>
-          <h2 class="section-heading">Contact Me</h2>
-        </div>
-        
-        <div class="section-content">
-          <div class="row justify-content-center">
-            <div class="col-lg-8">
-              <div class="card p-4">
-                <div class="row">
-                  <div class="col-md-6 mb-3 mb-md-0">
-                    <a href="mailto:dhilipsubramanian2002@gmail.com" class="contact-link">
-                      <i class="fas fa-envelope contact-icon"></i>
-                      <span>Email</span>
-                    </a>
-                  </div>
-                  <div class="col-md-6 mb-3 mb-md-0">
-                    <a href="https://www.linkedin.com/in/dhilip-s-62ab26200/" target="_blank" class="contact-link">
-                      <i class="fab fa-linkedin contact-icon"></i>
-                      <span>LinkedIn</span>
-                    </a>
-                  </div>
-                  <div class="col-md-6 mb-3 mb-md-0">
-                    <a href="https://medium.com/@dhilip2002" target="_blank" class="contact-link">
-                      <i class="fab fa-medium contact-icon"></i>
-                      <span>Medium</span>
-                    </a>
-                  </div>
-                  <div class="col-md-6">
-                    <a href="https://www.youtube.com/@dhilips3913" target="_blank" class="contact-link">
-                      <i class="fab fa-youtube contact-icon"></i>
-                      <span>YouTube</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="container"><div class="section-header text-center"><p class="text-muted mb-2">Get in Touch</p><h2 class="section-heading">Contact Me</h2></div>
+      <div class="section-content"><div class="row justify-content-center"><div class="col-lg-8"><div class="card p-4"><div class="row">
+        <div class="col-md-6 mb-3 mb-md-0"><a href="mailto:dhilipsubramanian2002@gmail.com" class="contact-link"><i class="fas fa-envelope contact-icon"></i><span>Email</span></a></div>
+        <div class="col-md-6 mb-3 mb-md-0"><a href="https://www.linkedin.com/in/dhilip-s-62ab26200/" target="_blank" class="contact-link"><i class="fab fa-linkedin contact-icon"></i><span>LinkedIn</span></a></div>
+        <div class="col-md-6 mb-3 mb-md-0"><a href="https://medium.com/@dhilip2002" target="_blank" class="contact-link"><i class="fab fa-medium contact-icon"></i><span>Medium</span></a></div>
+        <div class="col-md-6"><a href="https://www.youtube.com/@dhilips3913" target="_blank" class="contact-link"><i class="fab fa-youtube contact-icon"></i><span>YouTube</span></a></div>
+      </div></div></div></div></div></div>
     </section>
 
     <!-- Footer -->
-    <footer>
-      <div class="container">
-        <div class="row mb-4">
-          <div class="col-md-12">
-            <ul class="nav justify-content-center">
-              <li class="nav-item">
-                <a class="nav-link text-dark" href="#about">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-dark" href="#experience">Experience</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-dark" href="#skills">Skills</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-dark" href="#projects">Projects</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-dark" href="#achievements">Achievements</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-dark" href="#contact">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <p class="mb-0">Copyright &copy; <span id="current-year"></span> Dhilip S. All Rights Reserved.</p>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <footer><div class="container"><ul class="nav justify-content-center mb-3">
+      <li class="nav-item"><a class="nav-link text-dark" href="#about">About</a></li><li class="nav-item"><a class="nav-link text-dark" href="#experience">Experience</a></li>
+      <li class="nav-item"><a class="nav-link text-dark" href="#skills">Skills</a></li><li class="nav-item"><a class="nav-link text-dark" href="#projects">Projects</a></li>
+      <li class="nav-item"><a class="nav-link text-dark" href="#achievements">Achievements</a></li><li class="nav-item"><a class="nav-link text-dark" href="#testimonials">Testimonials</a></li>
+      <li class="nav-item"><a class="nav-link text-dark" href="#contact">Contact</a></li>
+    </ul><p class="text-center mb-0">Copyright &copy; <span id="current-year"></span> Dhilip S. All Rights Reserved.</p></div></footer>
 
-    <!-- Bootstrap JS with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
     <script>
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          window.scrollTo({
-            top: target.offsetTop,
-            behavior: 'smooth'
-          });
-          
-          // Close hamburger menu when clicking a link
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) window.scrollTo({ top: target.offsetTop, behavior: 'smooth' });
           const navbarCollapse = document.querySelector('.navbar-collapse');
-          if (navbarCollapse.classList.contains('show')) {
-            navbarCollapse.classList.remove('show');
-          }
-        }
+          if (navbarCollapse?.classList.contains('show')) navbarCollapse.classList.remove('show');
+        });
       });
-    });
-
-    // Function to calculate experience durations
-    function calculateExperienceDurations() {
-      // Calculate duration for Junior Associate at KGiSL (Sep 2025 - Present)
-      const juniorAssociateStartDate = new Date('2025-09-01');
-      const currentDate = new Date();
-      
-      // Calculate Junior Associate duration in months
-      const juniorAssociateMonthsDiff = (currentDate.getFullYear() - juniorAssociateStartDate.getFullYear()) * 12 + 
-                          (currentDate.getMonth() - juniorAssociateStartDate.getMonth());
-      
-      // Format the Junior Associate duration text
-      let juniorAssociateDurationText = formatDuration(juniorAssociateMonthsDiff);
-      
-      // Calculate duration for Trainee at KGiSL (Oct 2024 - Aug 2025)
-      const TraineeStartDate = new Date('2024-10-07');
-      const TraineeEndDate = new Date('2025-08-31');
-      
-      // Calculate Trainee duration in months
-      const TraineeMonthsDiff = (TraineeEndDate.getFullYear() - TraineeStartDate.getFullYear()) * 12 + 
-                          (TraineeEndDate.getMonth() - TraineeStartDate.getMonth());
-      
-      // Format the Trainee duration text
-      let TraineeDurationText = formatDuration(TraineeMonthsDiff);
-      
-      // Calculate duration for Bejawar experience (Jun 2023 - Feb 2024)
-      const bejawarStartDate = new Date('2023-06-20');
-      const bejawarEndDate = new Date('2024-02-14');
-      
-      // Calculate Bejawar duration in months
-      const bejawarMonthsDiff = (bejawarEndDate.getFullYear() - bejawarStartDate.getFullYear()) * 12 + 
-                            (bejawarEndDate.getMonth() - bejawarStartDate.getMonth());
-      
-      // Format the Bejawar duration text
-      let bejawarDurationText = formatDuration(bejawarMonthsDiff);
-      
-      // Update the duration elements
-      document.getElementById('junior-associate-duration').textContent = juniorAssociateDurationText;
-      document.getElementById('kgisl-duration').textContent = TraineeDurationText;
-      document.getElementById('bejawar-duration').textContent = bejawarDurationText;
-    }
-
-    // Helper function to format duration in years and months
-    function formatDuration(totalMonths) {
-      const years = Math.floor(totalMonths / 12);
-      const months = totalMonths % 12;
-      
-      let durationText = '';
-      
-      if (years > 0) {
-        durationText += years + (years === 1 ? ' year' : ' years');
-        if (months > 0) {
-          durationText += ' and ' + months + (months === 1 ? ' month' : ' months');
-        }
-      } else {
-        durationText = months + (months === 1 ? ' month' : ' months');
+      function formatDuration(months) {
+        const y = Math.floor(months / 12), m = months % 12;
+        if (y === 0) return m + (m === 1 ? ' month' : ' months');
+        if (m === 0) return y + (y === 1 ? ' year' : ' years');
+        return y + (y === 1 ? ' year' : ' years') + ' and ' + m + (m === 1 ? ' month' : ' months');
       }
-      
-      return durationText;
-    }
-
-    // Function to update copyright year
-    function updateCopyrightYear() {
-      const currentYear = new Date().getFullYear();
-      const yearElements = document.querySelectorAll('#current-year');
-      yearElements.forEach(element => {
-        element.textContent = currentYear;
-      });
-    }
-
-    // Call functions when page loads
-    document.addEventListener('DOMContentLoaded', function() {
-      updateCopyrightYear();
-      calculateExperienceDurations();
-    });
-
-    // Set up automatic updates
-    function setupAutomaticUpdates() {
-      // Check for updates every hour
-      setInterval(function() {
-        const now = new Date();
+      function calcExp() {
+        const juniorStart = new Date('2025-09-01');
+        let juniorMonths = (new Date().getFullYear() - juniorStart.getFullYear()) * 12 + (new Date().getMonth() - juniorStart.getMonth());
+        document.getElementById('junior-associate-duration').innerText = formatDuration(Math.max(0, juniorMonths));
         
-        // Update on the 1st of every month for experience durations
-        if (now.getDate() === 1 && now.getHours() === 0 && now.getMinutes() === 0) {
-          calculateExperienceDurations();
-        }
+        const traineeStart = new Date('2024-10-07'), traineeEnd = new Date('2025-08-31');
+        let traineeMonths = (traineeEnd.getFullYear() - traineeStart.getFullYear()) * 12 + (traineeEnd.getMonth() - traineeStart.getMonth());
+        document.getElementById('kgisl-duration').innerText = formatDuration(traineeMonths);
         
-        // Update on January 1st for copyright year
-        if (now.getMonth() === 0 && now.getDate() === 1 && now.getHours() === 0 && now.getMinutes() === 0) {
-          updateCopyrightYear();
-        }
-      }, 60 * 60 * 1000); // Check every hour
-    }
-
-    // Set up the automatic updates when the page loads
-    document.addEventListener('DOMContentLoaded', function() {
-      updateCopyrightYear();
-      calculateExperienceDurations();
-      setupAutomaticUpdates();
-    });
+        const bejStart = new Date('2023-06-20'), bejEnd = new Date('2024-02-14');
+        let bejMonths = (bejEnd.getFullYear() - bejStart.getFullYear()) * 12 + (bejEnd.getMonth() - bejStart.getMonth());
+        document.getElementById('bejawar-duration').innerText = formatDuration(bejMonths);
+      }
+      document.getElementById('current-year').innerText = new Date().getFullYear();
+      calcExp();
     </script>
   </body>
 </html>
